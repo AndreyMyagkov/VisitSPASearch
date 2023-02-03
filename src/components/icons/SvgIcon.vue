@@ -20,7 +20,6 @@ export default defineComponent({
         },
         fill: {
             type: String,
-            default: '#333',
         },
     },
     setup(props) {

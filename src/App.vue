@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Steps from './components/Steps.vue'
 import SvgIcon from './components/icons/SvgIcon.vue'
+import HotelCategoriesControl from './components/HotelCategoriesControl.vue';
 
 import { ref, reactive } from 'vue';
 
@@ -18,12 +19,16 @@ const steps = reactive([
 const setCurrentStep = (step: number) => {
   currentStep.value = step
 }
+
+const hotelCategory = ref(3);
 </script>
 
 <template>
-  <Steps :steps= "steps" :current="currentStep" @change="setCurrentStep"></Steps>
+  <div class="ks-app" notranslate>
+      <Steps :steps= "steps" :current="currentStep" @change="setCurrentStep"></Steps>
+      <HotelCategoriesControl v-model="hotelCategory"></HotelCategoriesControl>
 
-  
+  </div>
 </template>
 
 <style scoped>

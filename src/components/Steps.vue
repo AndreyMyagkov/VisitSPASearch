@@ -71,6 +71,8 @@ const onClick = (id: number) => {
     gap: 10px;
     align-items: center;
     padding-right: 10px;
+    z-index: 1;
+    fill: #fff;
     --step-color: var(--step-disable);
 }
 .ks-steps__item_visited {

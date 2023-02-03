@@ -1,9 +1,29 @@
 <script setup lang="ts">
 import Steps from './components/Steps.vue'
+import SvgIcon from './components/icons/SvgIcon.vue'
+
+import { ref, reactive } from 'vue';
+
+const currentStep = ref(1);
+
+
+const steps = reactive([
+  { id: 1, slug: 'search', title: 'Suche' },
+  { id: 2, slug: 'regions', title: 'Reiseziel' },
+  { id: 3, slug: 'hotels', title: 'Hotels' },
+  { id: 4, slug: 'offer', title: 'Angebote' },
+  { id: 5, slug: 'booking', title: 'Buchung' },
+]);
+
+const setCurrentStep = (step: number) => {
+  currentStep.value = step
+}
 </script>
 
 <template>
-  <Steps></Steps>
+  <Steps :steps= "steps" :current="currentStep" @change="setCurrentStep"></Steps>
+
+  
 </template>
 
 <style scoped>

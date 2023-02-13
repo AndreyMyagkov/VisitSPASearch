@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import Steps from './components/Steps.vue'
 import SvgIcon from './components/icons/SvgIcon.vue'
-import HotelCategoriesControl from './components/HotelCategoriesControl.vue';
+
 import UiKit from './components/UiKit.vue';
+
+import SearchForm from '@/components/Search/SearchForm.vue';
+import SearchFilter from '@/components/Search/SearchFilter.vue';
 
 import { ref, reactive } from 'vue';
 
@@ -27,19 +30,17 @@ const hotelCategory = ref(3);
 <template>
   <div class="ks-app" notranslate cq-min-w-991>
       <Steps :steps= "steps" :current="currentStep" @change="setCurrentStep"></Steps>
-      <HotelCategoriesControl v-model="hotelCategory"></HotelCategoriesControl>
+
 
       <div class="ks-search ks-block ks-mb-50 ks-p-20">
-        Форма
+        <SearchForm></SearchForm>
       </div>
 
 
       <div class="ks-result">
         <div class="ks-row">
           <div class="ks-col-12 ks-col-md-4 ks-col-lg-3">
-            <div class="ks-filter ks-block ks-p-20">
-              фильтр
-            </div>
+            <SearchFilter></SearchFilter>
           </div>
         
 

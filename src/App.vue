@@ -2,6 +2,7 @@
 import Steps from './components/Steps.vue'
 import SvgIcon from './components/icons/SvgIcon.vue'
 import HotelCategoriesControl from './components/HotelCategoriesControl.vue';
+import UiKit from './components/UiKit.vue';
 
 import { ref, reactive } from 'vue';
 
@@ -24,9 +25,38 @@ const hotelCategory = ref(3);
 </script>
 
 <template>
-  <div class="ks-app" notranslate>
+  <div class="ks-app" notranslate cq-min-w-991>
       <Steps :steps= "steps" :current="currentStep" @change="setCurrentStep"></Steps>
       <HotelCategoriesControl v-model="hotelCategory"></HotelCategoriesControl>
+
+      <div class="ks-search ks-block ks-mb-50 ks-p-20">
+        Форма
+      </div>
+
+
+      <div class="ks-result">
+        <div class="ks-row">
+          <div class="ks-col-12 ks-col-md-4 ks-col-lg-3">
+            <div class="ks-filter ks-block ks-p-20">
+              фильтр
+            </div>
+          </div>
+        
+
+          <div class="ks-col-12 ks-col-md-8 ks-col-lg-9">
+            <div class="ks-result-content">
+              результаты
+              <UiKit></UiKit>
+              <div class="ks-block ks-mb-30">
+                Карточка
+              </div>
+              <div class="ks-block ks-mb-30">
+                Карточка
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
   </div>
 </template>

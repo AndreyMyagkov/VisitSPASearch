@@ -6,6 +6,7 @@ import UiKit from './components/UiKit.vue';
 
 import SearchForm from '@/components/Search/SearchForm.vue';
 import SearchFilter from '@/components/Search/SearchFilter.vue';
+import Manager from './components/Search/Manager.vue';
 
 import { ref, reactive } from 'vue';
 
@@ -46,7 +47,10 @@ const hotelCategory = ref(3);
 
           <div class="ks-col-12 ks-col-md-8 ks-col-lg-9">
             <div class="ks-result-content">
-              результаты
+              
+              <Manager></Manager>
+
+
               <UiKit></UiKit>
               <div class="ks-block ks-mb-30">
                 Карточка

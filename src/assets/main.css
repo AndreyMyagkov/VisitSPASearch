@@ -65,6 +65,10 @@
     color: var(--ks-color-primary);
 }
 
+.ks-app img {
+    max-width: 100%;
+}
+
 
 
 
@@ -89,6 +93,16 @@
   max-width: 100%;
 }
 
+.ks-col-12 {
+  flex-basis: 83.3333%;
+  max-width: 83.3333%;
+}
+
+.ks-col-8 {
+  flex-basis: 66.6666%;
+  max-width: 66.6666%;
+}
+
 .ks-col-6 {
   flex-basis: 50%;
   max-width: 50%;
@@ -102,6 +116,11 @@
 .ks-col-3  {
   flex-basis: 25%;
   max-width: 25%;
+}
+
+.ks-col-2  {
+  flex-basis: 16.6666%;
+  max-width: 16.6666%;
 }
 
 /* MD  */
@@ -202,6 +221,7 @@
 .ks-block {
   border: solid 1px var(--ks-color-border-block);
   border-radius: var(--ks-border-radius);
+  background-color: #fff;
 }
 
 /* UI-kit */
@@ -514,6 +534,10 @@
   font-size: var(--ks-font-size); /*20*/
   line-height: 1.25;
   font-weight: 700;
+}
+.ks-p {
+  font-size: var(--ks-font-size); /*20*/
+  line-height: 1.25;
 }
 
 

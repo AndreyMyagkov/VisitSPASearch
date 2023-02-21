@@ -30,7 +30,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 .ks-sort-bar {
     padding: 20px;
     margin-bottom: 40px;

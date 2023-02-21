@@ -9,6 +9,8 @@ import SearchFilter from '@/components/Search/SearchFilter.vue';
 import Manager from './components/Search/Manager.vue';
 import SortControl from './components/Search/SortControl.vue'
 
+import Accordion from '@/components/Countries/Accordion.vue'
+
 import { ref, reactive } from 'vue';
 
 const currentStep = ref(1);
@@ -25,6 +27,10 @@ const steps = reactive([
 const setCurrentStep = (step: number) => {
   currentStep.value = step
 }
+
+const countryList = reactive([
+  'Tschechien', 'Polen', 'Estland', 'Litauen', 'Israel', 'Slowokei', 'Türkei', 'Ungarn'
+]);
 
 const hotelCategory = ref(3);
 </script>
@@ -52,14 +58,18 @@ const hotelCategory = ref(3);
               <Manager></Manager>
               <SortControl></SortControl>
 
+              <Accordion 
+                :open="index <= 2" 
+                v-for="(item, index) in countryList"
+                :key="index">
+                <template v-slot:header>{{item}}</template>
+              info2
+            </Accordion>
 
+              <!--
               <UiKit></UiKit>
-              <div class="ks-block ks-mb-30">
-                Карточка
-              </div>
-              <div class="ks-block ks-mb-30">
-                Карточка
-              </div>
+              -->
+              
             </div>
           </div>
         </div>

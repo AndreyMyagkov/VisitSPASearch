@@ -67,8 +67,12 @@
 
 .ks-app img {
     max-width: 100%;
+    display: block;
 }
 
+.ks-app svg * {
+    fill: inherit;
+}
 
 
 
@@ -544,4 +548,10 @@
 /* display */
 .ks-d-block {
   display: block;
+}
+.ks-d-flex {
+  display: flex;
+}
+.ks-align-items-center {
+  align-items: center;
 }

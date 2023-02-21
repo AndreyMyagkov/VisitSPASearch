@@ -7,6 +7,7 @@ import UiKit from './components/UiKit.vue';
 import SearchForm from '@/components/Search/SearchForm.vue';
 import SearchFilter from '@/components/Search/SearchFilter.vue';
 import Manager from './components/Search/Manager.vue';
+import SortControl from './components/Search/SortControl.vue'
 
 import { ref, reactive } from 'vue';
 
@@ -49,6 +50,7 @@ const hotelCategory = ref(3);
             <div class="ks-result-content">
               
               <Manager></Manager>
+              <SortControl></SortControl>
 
 
               <UiKit></UiKit>

@@ -8,6 +8,9 @@
         </summary>
         <div class="ks-accordion__content">
             <slot></slot>
+            <div class="ks-accordion__allresorts">
+                mehr anzeigen &gt;
+            </div>
         </div>
     </details>
 </template>
@@ -55,5 +58,13 @@ details[open]>summary .ks-accordion__header {
     font-size: 34px;
     line-height: 1.333;
     font-weight: 700;
+}
+.ks-accordion__allresorts {
+    padding: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--ks-color-primary);
+    cursor: pointer;
 }
 </style>

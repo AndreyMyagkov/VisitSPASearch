@@ -9,7 +9,10 @@ import SearchFilter from '@/components/Search/SearchFilter.vue';
 import Manager from './components/Search/Manager.vue';
 import SortControl from './components/Search/SortControl.vue'
 
-import Accordion from '@/components/Countries/Accordion.vue'
+import CountriesAccordion from '@/components/Countries/CountriesAccordion.vue'
+
+import CountriesResort from '@/components/Countries/CountriesResort.vue'
+import CountriesTopHotel from '@/components/Countries/CountriesTopHotel.vue'
 
 import { ref, reactive } from 'vue';
 
@@ -58,17 +61,24 @@ const hotelCategory = ref(3);
               <Manager></Manager>
               <SortControl></SortControl>
 
-              <Accordion 
+              <CountriesAccordion 
                 :open="index <= 2" 
                 v-for="(item, index) in countryList"
-                :key="index">
+                :key="index"
+              >
                 <template v-slot:header>{{item}}</template>
-              info2
-            </Accordion>
 
-              <!--
+                <CountriesResort>
+                  <CountriesTopHotel></CountriesTopHotel>
+                </CountriesResort>
+                <CountriesResort></CountriesResort>
+                <CountriesResort></CountriesResort>
+
+              </CountriesAccordion>
+
+              
               <UiKit></UiKit>
-              -->
+             
               
             </div>
           </div>

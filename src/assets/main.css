@@ -10,7 +10,7 @@
     --ks-color-primary: #074A2A; /* Темно зеленый шрифтб иконки */
     --ks-color-primary-accent: #00A958; /* Светло зеленые кнопки, шаг, табы, рейтинг */
     --ks-color-secondary: #F4C258; /* Кнопки */
-    --ks-color-secondary-accent: #FFD400; /* Шагб звезды */ 
+    --ks-color-secondary-accent: #FFD400; /* Шаг, звезды */ 
     --ks-color-third: #0052B4;
     --ks-color-third-accent: #00B1E0;
     --ks-color-danger: #D80027;
@@ -74,6 +74,11 @@
     fill: inherit;
 }
 
+.ks-app * * {
+  color: inherit;
+  font-size: inherit;
+  fill: currentColor;
+}
 
 
 /* micro grid */
@@ -357,6 +362,18 @@
   opacity: 0.85;
 }
 
+.ks-btn-outline-primary-accent {
+  color: var(--ks-color-primary-accent);
+  background: #fff;
+  border: 1px solid var(--ks-color-primary-accent);
+}
+
+.ks-btn-outline-primary-accent:hover {
+  color: var(--ks-color-primary-accent);
+  background: #fff;
+  border: 1px solid var(--ks-color-primary-accent);
+  opacity: 0.85;
+}
 
 
 /* custom checkbox, radio TODO: удалить, если не надо*/

@@ -11,8 +11,8 @@
     --ks-color-primary-accent: #00A958; /* Светло зеленые кнопки, шаг, табы, рейтинг */
     --ks-color-secondary: #F4C258; /* Кнопки */
     --ks-color-secondary-accent: #FFD400; /* Шаг, звезды */ 
-    --ks-color-third: #0052B4;
-    --ks-color-third-accent: #00B1E0;
+    --ks-color-tertiary: #0052B4;
+    --ks-color-tertiary-accent: #00B1E0;
     --ks-color-danger: #D80027;
 
 }

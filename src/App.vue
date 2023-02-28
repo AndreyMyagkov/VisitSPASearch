@@ -17,6 +17,7 @@ import CountriesTopHotel from '@/components/Countries/CountriesTopHotel.vue'
 import HotelCard from '@/components/HotelCard/HotelCard.vue'
 
 import Tabs from './components/UI/Tabs.vue';
+import PriceList from './components/UI/PriceList.vue';
 
 import { ref, reactive } from 'vue';
 
@@ -64,6 +65,7 @@ const hotelCategory = ref(3);
               
               <HotelCard>
                 <Tabs></Tabs>
+                <PriceList></PriceList>
               </HotelCard>
 
               <Manager></Manager>

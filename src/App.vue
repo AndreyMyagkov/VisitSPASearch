@@ -2,11 +2,11 @@
 import Steps from './components/Steps.vue'
 import SvgIcon from './components/icons/SvgIcon.vue'
 
-import UiKit from './components/UiKit.vue';
+import UiKit from './components/UiKit.vue'
 
-import SearchForm from '@/components/Search/SearchForm.vue';
-import SearchFilter from '@/components/Search/SearchFilter.vue';
-import Manager from './components/Search/Manager.vue';
+import SearchForm from '@/components/Search/SearchForm.vue'
+import SearchFilter from '@/components/Search/SearchFilter.vue'
+import Manager from './components/Search/Manager.vue'
 import SortControl from './components/Search/SortControl.vue'
 
 import CountriesAccordion from '@/components/Countries/CountriesAccordion.vue'
@@ -16,10 +16,12 @@ import CountriesTopHotel from '@/components/Countries/CountriesTopHotel.vue'
 
 import HotelCard from '@/components/HotelCard/HotelCard.vue'
 
-import Tabs from './components/UI/Tabs.vue';
-import PriceList from './components/UI/PriceList.vue';
+import Tabs from './components/UI/Tabs.vue'
+import PriceList from './components/UI/PriceList.vue'
 
-import { ref, reactive } from 'vue';
+import Hotel from '@/components/Hotel/Hotel.vue'
+
+import { ref, reactive } from 'vue'
 
 const currentStep = ref(1);
 
@@ -47,6 +49,9 @@ const hotelCategory = ref(3);
   <div class="ks-app" notranslate cq-min-w-991>
       <Steps :steps= "steps" :current="currentStep" @change="setCurrentStep"></Steps>
 
+<Hotel>
+
+</Hotel>
 
       <div class="ks-search ks-block ks-mb-50 ks-p-20">
         <SearchForm></SearchForm>
@@ -61,6 +66,7 @@ const hotelCategory = ref(3);
         
 
           <div class="ks-col-12 ks-col-md-8 ks-col-lg-9">
+
             <div class="ks-result-content">
               
               <HotelCard>

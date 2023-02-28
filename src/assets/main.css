@@ -336,6 +336,18 @@
   opacity: 0.85;
 }
 
+.ks-btn-primary-accent {
+  color: #fff;
+  background-color: var(--ks-color-primary-accent);
+  border-color: var(--ks-color-primary-accent);
+}
+
+.ks-btn-primary:hover {
+  background-color: var(--ks-color-primary-accent);
+  border-color: var(--ks-color-primary-accent);
+  opacity: 0.85;
+}
+
 .ks-btn-secondary {
   color: #fff;
   background-color: var(--ks-color-secondary);

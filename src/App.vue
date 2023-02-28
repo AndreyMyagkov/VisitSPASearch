@@ -16,6 +16,8 @@ import CountriesTopHotel from '@/components/Countries/CountriesTopHotel.vue'
 
 import HotelCard from '@/components/HotelCard/HotelCard.vue'
 
+import Tabs from './components/UI/Tabs.vue';
+
 import { ref, reactive } from 'vue';
 
 const currentStep = ref(1);
@@ -60,7 +62,9 @@ const hotelCategory = ref(3);
           <div class="ks-col-12 ks-col-md-8 ks-col-lg-9">
             <div class="ks-result-content">
               
-              <HotelCard></HotelCard>
+              <HotelCard>
+                <Tabs></Tabs>
+              </HotelCard>
 
               <Manager></Manager>
               <SortControl></SortControl>

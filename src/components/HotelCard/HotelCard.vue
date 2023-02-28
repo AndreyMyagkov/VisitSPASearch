@@ -136,7 +136,7 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
     background-color: #fff;
     margin-bottom: 30px;
 }
-.ks-hotel-card {
+.ks-hotel-card__wr {
     display: flex;
 }
 
@@ -467,5 +467,34 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
     margin: 0;
     font-size: 18px;
 
+}
+
+.ks-hotel-card__inner {
+    padding-top: 30px;
+}
+
+.ks-hotel-card__inner :deep(.ks-tabs) {
+    padding: 0 10px;
+    border-bottom: solid 2px var(--ks-color-primary-accent);
+    position: relative;
+}
+
+.ks-hotel-card__inner :deep(.ks-tabs__tab) {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.25;
+    text-align: center;
+    flex: 0 0 auto;
+    min-width: 164px;
+    height: 56px;
+    padding: 5px 1em;
+    background-color: #fff;
+    color: #444;
+    border: solid 1px var(--ks-color-primary-accent);
+}
+
+.ks-hotel-card__inner :deep(.ks-tabs__tab_active) {
+    color: #fff;
+    background-color: var(--ks-color-primary-accent);
 }
 </style>

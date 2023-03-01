@@ -233,6 +233,13 @@
   background-color: #fff;
 }
 
+.ks-card {
+  border: solid 1px var(--ks-color-border-control);
+  border-radius: var(--ks-border-radius);
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
 /* UI-kit */
 .ks-form-input, .ks-form-select, .ks-form-textarea {
   width: 100%;

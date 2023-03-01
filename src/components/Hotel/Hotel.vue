@@ -95,7 +95,7 @@
                     <div class="ks-hotel-environments">
                         <div class="ks-environment-card">
                             <div class="ks-environment-card__top">
-                                <img src="" alt="" class="ks-environment-card__img">
+                                <img src="https://placehold.jp/40703d/ffffff/330x290.png" alt="" class="ks-environment-card__img" loading="lazy">
                             </div>
                             <div class="ks-environment-card__main">
                                 <div class="ks-environment-card__header">Punta de la Ballena</div>
@@ -112,6 +112,17 @@
 
             </div>
 
+            <!-- Zimmer Tab -->
+            <div class="ks-hotel-info">
+
+                <div class="ks-hotel-info__header ks-h2">Zimmer</div>
+                <div class="ks-hotel-info__content ks-u-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, quam dolor. Ut velit at excepturi non eum vitae optio laboriosam, facere quidem nulla rem natus voluptatem iste perferendis ullam a?
+                </div>
+                <RoomCard></RoomCard>
+                <RoomCard></RoomCard>
+            </div>
+
         </div>
 
     </div>
@@ -121,6 +132,7 @@
 <script setup>
 import SvgIcon from '@/components/icons/SvgIcon.vue'
 import Tabs from '@/components/UI/Tabs.vue'
+import RoomCard from '@/components/Hotel/RoomCard.vue'
 
 </script>
 

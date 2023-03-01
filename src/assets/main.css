@@ -194,6 +194,10 @@
   max-width: 25%;
 }
 
+[cq-min-w-991] .ks-col-lg-2 {
+  flex-basis: 16.6667%;
+  max-width: 16.6667%;
+}
 
 /* utilite */ 
 .ks-color-primary {

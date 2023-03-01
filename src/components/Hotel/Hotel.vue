@@ -123,6 +123,16 @@
                 <RoomCard></RoomCard>
             </div>
 
+            <!-- Medical procedures Tab -->
+            <div class="ks-hotel-info">
+            
+                <div class="ks-hotel-info__header ks-h2">Wellness- und Gesundheitpakete</div>
+                <div class="ks-hotel-info__content ks-u-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, quam dolor. Ut velit at excepturi non eum vitae optio laboriosam, facere quidem nulla rem natus voluptatem iste perferendis ullam a?
+                </div>
+                <MedicalCard></MedicalCard>
+            </div>
+
         </div>
 
     </div>
@@ -133,6 +143,7 @@
 import SvgIcon from '@/components/icons/SvgIcon.vue'
 import Tabs from '@/components/UI/Tabs.vue'
 import RoomCard from '@/components/Hotel/RoomCard.vue'
+import MedicalCard from '@/components/Hotel/MedicalCard.vue'
 
 </script>
 

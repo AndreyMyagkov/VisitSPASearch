@@ -133,6 +133,111 @@
                 <MedicalCard></MedicalCard>
             </div>
 
+
+            <!-- Termine Tab -->
+            <div class="ks-hotel-info">
+            
+                <div class="ks-hotel-info__header ks-h2">Gewählt</div>
+                
+
+                <div class="ks-hotel-attributes">
+                    <div class="ks-row">
+                        <div class="ks-col-lg-6">
+
+                            <div class="ks-hotel-attribute">
+                                <div class="ks-hotel-attribute__col-icon">
+                                    <SvgIcon name="back-and-forth" width="30" height="30" class="ks-hotel-attribute__icon"></SvgIcon>
+                                </div>
+                                <div class="ks-hotel-attribute__col-info">
+                                    <div class="ks-hotel-attribute__title">AN- & ABREISE</div>
+                                    <div class="ks-hotel-attribute__descr">Flug</div>
+                                </div>
+                            
+                            </div>
+
+                            <div class="ks-hotel-attribute">
+                                <div class="ks-hotel-attribute__col-icon">
+                                    <SvgIcon name="bed" width="30" height="30" class="ks-hotel-attribute__icon"></SvgIcon>
+                                </div>
+                                <div class="ks-hotel-attribute__col-info">
+                                    <div class="ks-hotel-attribute__title">Проживание</div>
+                                    <div class="ks-hotel-attribute__descr">7 Ночей проживание, 3-х разовое питание</div>
+                                </div>
+                            </div>
+                             
+                        </div>
+                        <div class="ks-col-lg-6">
+
+                            <div class="ks-hotel-attribute">
+                                <div class="ks-hotel-attribute__col-icon">
+                                    <SvgIcon name="bell" width="30" height="30" class="ks-hotel-attribute__icon"></SvgIcon>
+                                </div>
+                                <div class="ks-hotel-attribute__col-info">
+                                    <div class="ks-hotel-attribute__title">Услуги</div>
+                                    <div class="ks-hotel-attribute__descr">бесплатная экскурсия в Прагу</div>
+                                </div>
+                            </div>
+
+
+                            <div class="ks-hotel-attribute">
+                                <div class="ks-hotel-attribute__col-icon">
+                                    <SvgIcon name="spa" width="30" height="30" class="ks-hotel-attribute__icon"></SvgIcon>
+                                </div>
+                                <div class="ks-hotel-attribute__col-info">
+                                    <div class="ks-hotel-attribute__title">Лечебный пакет <span class="ks-hotel-__change-package">Изменить пакет</span></div>
+                                    <div class="ks-hotel-attribute__descr">1 осмотр доктора, 22 лечебных процедур</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="ks-hotel-package__list ks-row">
+                    <div class="ks-col-lg-6">
+                        <div class="ks-hotel-package__group">
+                            <div class="ks-hotel-package__header">
+                                <SvgIcon name="spa" width="30" height="30" class="ks-hotel-package__icon"></SvgIcon>
+                                <div class="ks-hotel-package__name ks-h2">Kurpakete</div>
+                            </div>
+                            <PriceList></PriceList>
+                        </div>
+                    </div>
+
+                    <div class="ks-col-lg-6">
+                        <div class="ks-hotel-package__group">
+                            <div class="ks-hotel-package__header">
+                                <SvgIcon name="hearth" width="30" height="30" class="ks-hotel-package__icon"></SvgIcon>
+                                <div class="ks-hotel-package__name ks-h2">Wellness Pakete</div>
+                            </div>
+                            <PriceList></PriceList>
+                        </div>
+                    </div>
+
+                    <div class="ks-col-lg-6">
+                        <div class="ks-hotel-package__group">
+                            <div class="ks-hotel-package__header">
+                                <SvgIcon name="ayurveda" width="30" height="30" class="ks-hotel-package__icon"></SvgIcon>
+                                <div class="ks-hotel-package__name ks-h2">Ayurveda</div>
+                            </div>
+                            <PriceList></PriceList>
+                        </div>
+                    </div>
+
+                    <div class="ks-col-lg-6">
+                        <div class="ks-hotel-package__group">
+                            <div class="ks-hotel-package__header">
+                                <SvgIcon name="exercise" width="30" height="30" class="ks-hotel-package__icon"></SvgIcon>
+                                <div class="ks-hotel-package__name ks-h2">Yoga</div>
+                            </div>
+                            <PriceList></PriceList>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
     </div>
@@ -144,6 +249,7 @@ import SvgIcon from '@/components/icons/SvgIcon.vue'
 import Tabs from '@/components/UI/Tabs.vue'
 import RoomCard from '@/components/Hotel/RoomCard.vue'
 import MedicalCard from '@/components/Hotel/MedicalCard.vue'
+import PriceList from '@/components/UI/PriceList.vue'
 
 </script>
 
@@ -423,4 +529,73 @@ import MedicalCard from '@/components/Hotel/MedicalCard.vue'
 }
 
 .ks-environment-card__button {}
+
+
+
+/* */
+.ks-hotel-attributes {}
+
+.ks-hotel-attribute {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--ks-color-primary);
+    border-bottom: solid 1px var(--ks-color-border-control);
+    margin-bottom: 24px;
+}
+
+.ks-hotel-attribute__col-icon {
+    flex: 0 0 30px;
+}
+
+.ks-hotel-attribute__icon {
+    font-size: 30px;
+    color: var(--ks-color-primary);
+    line-height: 1;
+    display: block;
+}
+
+.ks-hotel-attribute__col-info {}
+
+.ks-hotel-attribute__title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.ks-hotel-attribute__descr {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.ks-hotel-__change-package {
+    font-size: 14px;
+    line-height: 1.25;
+    text-decoration-line: underline;
+    color: #444444;
+    font-weight: 400;
+}
+
+
+/*  */
+.ks-hotel-package__list {}
+
+.ks-hotel-package__group {
+    margin-bottom: 30px;
+}
+
+.ks-hotel-package__header {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--ks-color-primary);
+}
+
+.ks-hotel-package__icon {
+    flex: 0 0 30px;
+    font-size: 30px;
+}
+
+.ks-hotel-package__name {}
 </style>

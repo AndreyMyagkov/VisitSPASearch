@@ -21,6 +21,8 @@ import PriceList from './components/UI/PriceList.vue'
 
 import Hotel from '@/components/Hotel/Hotel.vue'
 
+import Order from '@/components/Order/Order.vue'
+
 import { ref, reactive } from 'vue'
 
 const currentStep = ref(1);
@@ -48,6 +50,9 @@ const hotelCategory = ref(3);
 <template>
   <div class="ks-app" notranslate cq-min-w-991>
       <Steps :steps= "steps" :current="currentStep" @change="setCurrentStep"></Steps>
+
+
+<Order></Order>
 
 <Hotel>
 

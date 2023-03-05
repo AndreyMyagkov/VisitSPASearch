@@ -179,9 +179,19 @@
   max-width: 66.6666%;
 }
 
+[cq-min-w-991] .ks-col-lg-7 {
+  flex-basis: 58.333%;
+  max-width: 58.333%;
+}
+
 [cq-min-w-991] .ks-col-lg-6 {
   flex-basis: 50%;
   max-width: 50%;
+}
+
+[cq-min-w-991] .ks-col-lg-5 {
+  flex-basis: 41.6667%;
+  max-width: 41.6667%;
 }
 
 [cq-min-w-991] .ks-col-lg-4 {

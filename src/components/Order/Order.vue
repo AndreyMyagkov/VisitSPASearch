@@ -41,6 +41,10 @@
             <SummaryCardRoom></SummaryCardRoom>
         </SummaryCard>
 
+        <SummaryCard>
+            <SummaryCardFlight></SummaryCardFlight>
+        </SummaryCard>
+
     </div>
 </template>
 
@@ -51,6 +55,7 @@ import SummaryCard from './SummaryCard.vue';
 import SumaryCardHotel from './SummaryCardHotel.vue';
 import SummaryCardPackage from './SummaryCardPackage.vue';
 import SummaryCardRoom from './SummaryCardRoom.vue';
+import SummaryCardFlight from './SummaryCardFlight.vue';
 </script>
 
 <style scoped>

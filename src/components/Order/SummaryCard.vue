@@ -4,10 +4,12 @@
             <div class="ks-col-lg-5">
                 <img src="https://placehold.jp/40703d/ffffff/330x290.png" alt="" class="ks-summary-card__img">
             </div>
-            <div class="ks-summary-card__content ks-col-lg-7">
-                <slot></slot>
-                <div class="ks-summary-card__footer">
-                    <div class="ks-summary-card__price ks-color-primary">180 €</div>
+            <div class="ks-col-lg-7">
+                <div class="ks-summary-card__content">
+                    <slot></slot>
+                    <div class="ks-summary-card__footer">
+                        <div class="ks-summary-card__price ks-color-primary">180 €</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -27,9 +29,10 @@
     max-height: 384px;
 }
 .ks-summary-card__content {
-    padding: 20px;
+    padding: 20px 20px 20px 0;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 .ks-summary-card__footer {
     margin-top: auto;
@@ -40,7 +43,7 @@
     line-height: 1.5;
     font-weight: 700;
 }
-:deep(.summary-card__change) {
+:deep(.ks-summary-card__change) {
     font-weight: 400;
     color: var(--ks-color-tertiary);
 }

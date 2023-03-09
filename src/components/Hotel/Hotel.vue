@@ -291,6 +291,7 @@ import PriceList from '@/components/UI/PriceList.vue'
     grid-template-columns: 24px 1fr;
     align-items: center;
     margin-bottom: 22px;
+    margin-top: 12px;
 }
 
 .ks-hotel-summary__resort-icon {
@@ -328,11 +329,11 @@ import PriceList from '@/components/UI/PriceList.vue'
 
 .ks-hotel-summary__durations {
     line-height: 1.25;
-    margin-bottom: 12px;
+    margin-bottom: 12px
 }
 
 .ks-hotel-summary__price {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     color: var(--ks-color-primary);
     line-height: 1.25;
 }
@@ -446,11 +447,11 @@ import PriceList from '@/components/UI/PriceList.vue'
 }
 
 .ks-facilities-card__main {
-
+    padding: 8px 0;
 }
 
 .ks-facilities-card__item {
-    padding: 5px 0;
+    padding: 7px 0;
     display: grid;
     gap: 10px;
     grid-template-columns: 20px 1fr;
@@ -479,7 +480,7 @@ import PriceList from '@/components/UI/PriceList.vue'
 .ks-hotel-environment__filter {}
 
 .ks-hotel-environment__filter-button {
-    margin: 0 20px 30px 0;
+    margin: 0 15px 30px 0;
 }
 
 
@@ -489,6 +490,7 @@ import PriceList from '@/components/UI/PriceList.vue'
     display: flex;
     border: solid 1px var(--ks-color-border-control);
     border-radius: var(--ks-border-radius);
+    margin-bottom: 20px;
 }
 
 .ks-environment-card__top {
@@ -498,6 +500,7 @@ import PriceList from '@/components/UI/PriceList.vue'
 .ks-environment-card__img {
     width: 100%;
     height: 100%;
+    max-height: 130px;
     object-fit: cover;
     border-radius: 5px 0 0 5px;
 }

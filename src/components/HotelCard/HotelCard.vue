@@ -3,7 +3,7 @@
         <div class="ks-hotel-card__wr">
             <div class="ks-hotel-card__media">
                 <div class="ks-hotel-card__media-wr">
-                    <img src="https://placehold.jp/40703d/ffffff/330x290.png" alt="" class="ks-hotel-card__img" width="330" height="290">
+                    <img src="https://placehold.jp/40703d/ffffff/330x290.png" alt="" class="ks-hotel-card__img" >
 
                     <div class="ks-hotel-card__label">Bestseller</div>
 
@@ -115,7 +115,7 @@
                 </div>
                 
                 <div class="ks-hotel-card__action">
-                    <button class="ks-hotel-card__btn-order ks-btn ks-btn-secondary">
+                    <button class="ks-hotel-card__btn-order ks-btn ks-btn-secondary ks-btn-sm">
                         jetzt online Buchen
                     </button>
                 </div>
@@ -137,18 +137,26 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
     margin-bottom: 30px;
 }
 .ks-hotel-card__wr {
-    display: flex;
+ 
 }
 
-.ks-hotel-card__media {
-    flex: 1 0 36.5%;
-    max-width: 36.5%;
-    max-height: 150px;
-    padding: 10px 0 10px 10px;
+ .ks-hotel-card__media {
+    max-height: 310px;
+    padding: 10px;
 }
+
+.ks-hotel-card__main {
+    padding: 10px 20px 10px 20px;
+}
+.ks-hotel-card__footer {
+    padding: 10px;
+}
+
+
 .ks-hotel-card__media-wr {
     position: relative;
     line-height: 1;
+    height: 100%;
 }
 
 .ks-hotel-card__img {
@@ -156,6 +164,8 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
     width: 100%;
     height: 100%;
     object-fit: cover;
+    max-width: 100%;
+    max-height: 290px;
 }
 .ks-hotel-card__label {
     font-weight: 700;
@@ -184,6 +194,7 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
     right: 10px;
     bottom: 12px;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 
 }
@@ -259,12 +270,7 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
     display: flex;
 }
 
-.ks-hotel-card__main {
-    flex: 1 1 60%;
-    max-width: 60%;
-    border-right: solid 1px var(--ks-color-border-control);
-    padding: 15px 20px 10px 20px;
-}
+
 
 .ks-hotel-card__header {
     margin-bottom: 5px;
@@ -391,11 +397,7 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
     font-size: 10px;
 }
 
-.ks-hotel-card__footer {
-    flex: 0 0 24.8%;
-    max-width: 24.8%;
-    padding: 10px;
-}
+
 .ks-hotel-card__actions-icons {
     display: flex;
     gap: 10px;
@@ -470,7 +472,7 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
 }
 
 .ks-hotel-card__inner {
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .ks-hotel-card__inner :deep(.ks-tabs) {
@@ -485,7 +487,7 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
     line-height: 1.25;
     text-align: center;
     flex: 0 0 auto;
-    min-width: 164px;
+    min-width: 0;
     height: 56px;
     padding: 5px 1em;
     background-color: #fff;
@@ -496,5 +498,50 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
 .ks-hotel-card__inner :deep(.ks-tabs__tab_active) {
     color: #fff;
     background-color: var(--ks-color-primary-accent);
+}
+
+@container ks-root (min-width: 768px) {
+    .ks-hotel-card__wr {
+        display: flex;
+    }
+
+    .ks-hotel-card__media {
+        flex: 1 0 210px;
+        /* max-width: 36.5%; */
+        max-width: 200px;
+        max-height: 310px;
+        padding: 10px 0 10px 10px;
+    }
+
+    .ks-hotel-card__main {
+        flex: 1 0 0%;
+        /* max-width: 60%; */
+        border-right: solid 1px var(--ks-color-border-control);
+        padding: 15px 20px 10px 20px;
+    }
+
+    .ks-hotel-card__footer {
+        flex: 0 0 24.8%;
+        max-width: 24.8%;
+        min-width: 230px;
+        padding: 10px;
+    }
+    .ks-hotel-card__inner :deep(.ks-tabs__tab) {
+        min-width: 164px;
+    }
+
+}
+
+@container ks-root (min-width: 930px) {
+    .ks-hotel-card__media {
+        flex: 1 0 340px;
+        /* max-width: 36.5%; */
+        max-width: 340px;
+        max-height: 310px;
+        padding: 10px 0 10px 10px;
+    }
+
+
+
 }
 </style>

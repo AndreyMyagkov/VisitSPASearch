@@ -151,13 +151,16 @@ const hotelAttribute = reactive([
     .ks-control-seaside {
         float: right
     }
+    .ks-control-seaside .ks-form-check-label {
+        font-weight: 400;
+    }
     .ks-control-attribute {
         margin-bottom: 15px;
     }
     .ks-control-attribute__item {
         text-align: center;
         border-radius: 3px;
-        padding: 5px;
+        padding: 4px;
         margin: 4px 0;
         cursor: pointer;
     }

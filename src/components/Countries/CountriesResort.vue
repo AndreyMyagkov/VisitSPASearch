@@ -2,12 +2,12 @@
     <div class="ks-resort ks-block">
         <div class="ks-resort__wr">
             <div class="ks-resort__media">
-                <img src="https://placehold.jp/3d4070/ffffff/300x200.png" alt="" class="ks-resort__img" width="300" height="200">
+                <img src="https://static.tourvisor.ru/hotel_pics/main400/1039.jpg" alt="" class="ks-resort__img" width="300" height="200">
             </div>
-            <div class="ks-resort__content row">
+           <!-- <div class="ks-resort__content row"> -->
                 <div class="ks-resort__main">
                     <div class="ks-resort__header ks-h2">Kolberg</div>
-                    <div class="ks-resort__hotels">45 hotels</div>
+                    <div class="ks-resort__hotels-count">45 hotels</div>
                 </div>
                 <div class="ks-resort__footer">
                     <div class="ks-resort__price">
@@ -20,8 +20,9 @@
                         <SvgIcon name="chevron-down" width="16" height="16"></SvgIcon>
                     </button>
                 </div>
-            </div>
+            <!--</div>-->
         </div>
+
         <div class="ks-resort__hotels">
             <slot></slot>
             <div class="ks-resort__allhotels">
@@ -39,34 +40,33 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
 .ks-resort {
     background-color: #fff;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 .ks-resort__wr {
-    display: flex;
 }
 .ks-resort__media {
-    flex: 1 1 32%;
-    max-width: 32%;
-    max-height: 164px;
+    flex: 0 0 250px;
+    /* flex: 1 1 32%;
+    max-width: 32%; */
+    height: 165px;
 }
 
 .ks-resort__img {
-    border-radius: 5px 0 0 5px;
+    /* border-radius: 5px 0 0 5px; */
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.ks-resort__content {
-    flex: 1 1 78%;
-    max-width: 78%;
+/* .ks-resort__content {
+    flex: 1 0 0%;
     padding: 20px 40px 20px 20px;
     display: flex;
-}
+} */
 
 .ks-resort__main {
-    flex: 1 1 60%;
-    max-width: 60%;
-    border-right: solid 1px var(--ks-color-border-control);
+    flex: 1 0 0%;
+    padding: 20px 20px 20px 20px;
 }
 
 .ks-resort__header {
@@ -74,14 +74,25 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
     color: var(--ks-color-primary);
 }
 
-.ks-resort__hotels {
+.ks-resort__hotels-count {
 
 }
 
 .ks-resort__footer {
-    flex: 1 1 40%;
-    max-width: 40%;
+    flex: 0 0 250px;
+    padding: 20px 40px 20px 40px;
     text-align: right;
+    
+    position: relative;
+}
+.ks-resort__footer:before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-top: solid 1px var(--ks-color-border-control);
+    top: 0;
+    left: 20px;
+    right: 20px;
 }
 
 .ks-resort__price {
@@ -125,5 +136,19 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
     line-height: 1.25;
     color: var(--ks-color-primary);
     cursor: pointer;
+}
+
+@container ks-root (min-width: 720px) {
+    .ks-resort__wr {
+        display: flex;
+    }
+    .ks-resort__footer:before {
+        border-left: solid 1px var(--ks-color-border-control);
+        border-top: none;
+        top: 20px;
+        bottom: 20px;
+        left: 0;
+    }
+
 }
 </style>

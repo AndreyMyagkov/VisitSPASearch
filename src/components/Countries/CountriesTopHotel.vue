@@ -1,9 +1,9 @@
 <template>
     <div class="ks-tophotel">
         <div class="ks-tophotel__media">
-            <img src="https://placehold.jp/40703d/ffffff/300x200.png" alt="" class="ks-tophotel__img" width="225" height="150">
+            <img src="https://static.tourvisor.ru/hotel_pics/main400/1308.jpg" alt="" class="ks-tophotel__img" width="225" height="150">
         </div>
-        <div class="ks-tophotel__content row">
+        <!--<div class="ks-tophotel__content row">-->
             <div class="ks-tophotel__main">
                 <div class="ks-tophotel__header ks-h2">
                     <span class="ks-tophotel__header-text">Spa Resort Sanssouci</span>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="ks-tophotel__perperson">(379 € pro Person)</div>
             </div>
-        </div>
+        <!--</div>-->
         <div class="ks-tophotel__action">
             <button class="ks-tophotel__btn">
                 <SvgIcon name="chevron-right" width="20" height="20" class="ks-tophotel__btn-icon"></SvgIcon>
@@ -45,14 +45,12 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
     margin-bottom: 20px;
     border-radius: var(--ks-border-radius);
     border: solid 1px #f0f0f0;
-    display: flex;
 }
 
 .ks-tophotel__media {
-    flex: 1 1 26%;
-    max-width: 26%;
-    max-height: 150px;
-    padding: 10px 0 10px 10px;
+    flex: 0 0 235px;
+    height: 170px;
+    padding: 10px;
 }
 
 .ks-tophotel__img {
@@ -62,22 +60,14 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
     object-fit: cover;
 }
 
-.ks-tophotel__content {
-    flex: 1 1 74%;
-    max-width: 74%;
-    padding: 10px 40px 10px 20px;
-    display: flex;
-}
 
 .ks-tophotel__main {
-    flex: 1 1 60%;
-    max-width: 60%;
-    border-right: solid 1px var(--ks-color-border-control);
-    padding: 10px 0 0 0;
+    flex: 1 0 0;
+    padding: 0px 20px 10px 20px;
 }
 
 .ks-tophotel__header {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     color: var(--ks-color-primary);
 }
 .ks-tophotel__header-text {
@@ -85,6 +75,7 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
 }
 .ks-tophotels__stars {
     white-space: nowrap;
+    font-size: 20px;
 }
 .ks-tophotels__star {
     color: var(--ks-color-secondary-accent);
@@ -102,10 +93,19 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
     margin-right: 1em;
 }
 .ks-tophotel__footer {
-    flex: 1 1 40%;
-    max-width: 40%;
+    flex: 0 0 250px;
     text-align: right;
-    padding: 23px 0 0 0;
+    padding: 23px 40px 10px 20px;
+    position: relative;
+}
+.ks-tophotel__footer:before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-top: solid 1px var(--ks-color-border-control);
+    top: 10px;
+    left: 20px;
+    right: 20px;
 }
 .ks-tophotel__settings {
     margin-bottom: 16px;
@@ -143,6 +143,32 @@ import SvgIcon from '@/components/icons/SvgIcon.vue';
 .ks-tophotel__btn {
     border: none;
     cursor: pointer;
+    display: block;
+    line-height: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 40px;
+
+}
+
+@container ks-root (min-width: 720px) {
+    .ks-tophotel {
+        display: flex;
+    }
+    .ks-tophotel__media {
+        padding: 10px 0 10px 10px;
+    }
+    .ks-tophotel__main {
+        padding: 20px 20px 10px 20px;
+    }
+
+    .ks-tophotel__footer:before {
+        border-left: solid 1px var(--ks-color-border-control);
+        border-top: none;
+        top: 20px;
+        bottom: 20px;
+        left: 0;
+    }
 
 }
 </style>

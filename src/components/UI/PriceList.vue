@@ -29,7 +29,6 @@
 
 .price-list__item {
     display: flex;
-    align-items: center;
     border-bottom: solid 1px var(--ks-color-primary);
     margin-bottom: 2px;
 }

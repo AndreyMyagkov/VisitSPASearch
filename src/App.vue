@@ -1,3 +1,72 @@
+<template>
+  <div class="ks-app" notranslate cq-min-w-991->
+    <div class="ks-container-root">
+      <Steps :steps= "steps" :current="currentStep" @change="setCurrentStep"></Steps>
+
+
+
+      <div class="ks-search ks-block ks-mb-50 ks-p-20">
+        <SearchForm></SearchForm>
+      </div>
+
+
+      <div class="ks-result">
+        <div class="ks-row">
+          <div class="ks-col-12 ks-col-md-4 ks-col-lg-3" style="display: none;">
+            <SearchFilter></SearchFilter>
+          </div>
+        
+
+          <div class="ks-col-12 ks-col-md-8- ks-col-lg-9-">
+
+            <div class="ks-result-content">
+              
+              <Manager></Manager>
+              <SortControl></SortControl>
+
+              
+
+              <CountriesAccordion 
+                :open="index <= 2" 
+                v-for="(item, index) in countryList"
+                :key="index"
+                
+              >
+                <template v-slot:header>{{item}}</template>
+
+                <CountriesResort>
+                  <CountriesTopHotel></CountriesTopHotel>
+                </CountriesResort>
+                <CountriesResort></CountriesResort>
+                <CountriesResort></CountriesResort>
+
+              </CountriesAccordion>
+
+              
+
+              
+             
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <HotelCard>
+        <Tabs></Tabs>
+        <PriceList></PriceList>
+      </HotelCard>
+
+
+      <Hotel v-if="false"></Hotel>
+      <Order v-if="false"></Order>
+      <UiKit v-if="false"></UiKit>
+
+      </div>
+  </div>
+</template>
+
+
 <script setup lang="ts">
 import Steps from './components/Steps.vue'
 import SvgIcon from './components/icons/SvgIcon.vue'
@@ -25,8 +94,8 @@ import Order from '@/components/Order/Order.vue'
 
 import { ref, reactive } from 'vue'
 
-const currentStep = ref(1);
 
+const currentStep = ref(1);
 
 const steps = reactive([
   { id: 1, slug: 'search', title: 'Suche' },
@@ -46,68 +115,6 @@ const countryList = reactive([
 
 const hotelCategory = ref(3);
 </script>
-
-<template>
-  <div class="ks-app" notranslate cq-min-w-991>
-      <Steps :steps= "steps" :current="currentStep" @change="setCurrentStep"></Steps>
-
-
-<Order></Order>
-
-<Hotel>
-
-</Hotel>
-
-      <div class="ks-search ks-block ks-mb-50 ks-p-20">
-        <SearchForm></SearchForm>
-      </div>
-
-
-      <div class="ks-result">
-        <div class="ks-row">
-          <div class="ks-col-12 ks-col-md-4 ks-col-lg-3">
-            <SearchFilter></SearchFilter>
-          </div>
-        
-
-          <div class="ks-col-12 ks-col-md-8 ks-col-lg-9">
-
-            <div class="ks-result-content">
-              
-              <HotelCard>
-                <Tabs></Tabs>
-                <PriceList></PriceList>
-              </HotelCard>
-
-              <Manager></Manager>
-              <SortControl></SortControl>
-
-              <CountriesAccordion 
-                :open="index <= 2" 
-                v-for="(item, index) in countryList"
-                :key="index"
-              >
-                <template v-slot:header>{{item}}</template>
-
-                <CountriesResort>
-                  <CountriesTopHotel></CountriesTopHotel>
-                </CountriesResort>
-                <CountriesResort></CountriesResort>
-                <CountriesResort></CountriesResort>
-
-              </CountriesAccordion>
-
-              
-              <UiKit></UiKit>
-             
-              
-            </div>
-          </div>
-        </div>
-      </div>
-
-  </div>
-</template>
 
 <style scoped>
 header {

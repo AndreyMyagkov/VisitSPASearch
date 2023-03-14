@@ -41,7 +41,7 @@ const onClick = (id: number) => {
 
 <style scoped>
 .ks-steps {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
     --step-disable: #999;
     --step-current: #FFD400;
     --step-visited: #00A958;
@@ -51,7 +51,7 @@ const onClick = (id: number) => {
     flex-wrap: nowrap;
     justify-content: space-between;
     position: relative;
-    padding: 0 40px;
+    padding: 0 50px;
 }
 .ks-steps__list:before {
     content: '';
@@ -97,5 +97,11 @@ const onClick = (id: number) => {
 .ks-steps__title {
     line-height: 1.25;
     flex: 1 1 auto;
+}
+@container ks-root (max-width: 800px) {
+    .ks-steps {
+        display: none;
+    }
+
 }
 </style>

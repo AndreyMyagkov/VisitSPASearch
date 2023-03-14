@@ -5,7 +5,7 @@ import SvgIcon from '@/components/icons/SvgIcon.vue'
 <template>
     <div class="ks-search-form">
         <div class="ks-row">
-            <div class="ks-col-12 ks-col-md-2 ks-col-lg-3">
+            <div class="ks-col-12 ks-col-md-6 ks-col-lg-3">
 
                 <label for="" class="ks-search-form__label ks-h3 ks-d-block">Reiseziel</label>
                 <div class="ks-control-geo">
@@ -20,7 +20,7 @@ import SvgIcon from '@/components/icons/SvgIcon.vue'
 
             </div>
 
-            <div class="ks-col-12 ks-col-md-2 ks-col-lg-3">
+            <div class="ks-col-12 ks-col-md-6 ks-col-lg-3">
                 <label for="" class="ks-search-form__label ks-h3 ks-d-block">Reisezeitraum/-dauer</label>
                 <div class="ks-input-icon-wrapper">
                     <input type="date" class="ks-form-input">
@@ -28,7 +28,7 @@ import SvgIcon from '@/components/icons/SvgIcon.vue'
                 </div>
             </div>
 
-            <div class="ks-col-12 ks-col-md-2 ks-col-lg-3">
+            <div class="ks-col-12 ks-col-md-6 ks-col-lg-3">
                 <label for="" class="ks-search-form__label ks-h3 ks-d-block">Reisende</label>
                 <div class="ks-input-icon-wrapper">
                     <select  class="ks-form-select">
@@ -41,7 +41,7 @@ import SvgIcon from '@/components/icons/SvgIcon.vue'
                 </div>
             </div>
 
-            <div class="ks-col-12 ks-col-md-2 ks-col-lg-3">
+            <div class="ks-col-12 ks-col-md-6 ks-col-lg-3">
                 <label class="ks-search-form__label ks-h3 ks-d-block">&nbsp;</label>
                 <button class="ks-btn ks-btn-secondary ks-search-form__btn-search">Suche anpassen &gt;</button>
             </div>
